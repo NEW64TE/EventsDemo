@@ -7,10 +7,10 @@ namespace EventsDemo
     {
         public class MessageService
         {
-            public void OnVideoEncoded(object source, EventArgs e)
+            public void OnVideoEncoded(object source, VideoEventArgs e)
             {
                 Thread.Sleep(3000);
-                Console.WriteLine("MailService: sending a text message...");
+                Console.WriteLine("MailService: sending a text message for {0}...", e.Video.Title);
             }
         }
     }
