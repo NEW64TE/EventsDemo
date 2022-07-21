@@ -15,6 +15,8 @@ namespace EventsDemo
             Thread.Sleep(3000);
 
             OnVideoEncoded(video);
+            Thread.Sleep(3000);
+            Console.WriteLine("Done!");
         }
 
         protected virtual void OnVideoEncoded(Video video)
