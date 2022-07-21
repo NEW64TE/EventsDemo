@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EventsDemo
+﻿namespace EventsDemo
 {
     class Program
     {
@@ -8,7 +6,10 @@ namespace EventsDemo
         {
             var video = new Video() { Title = "Video 1" };
             var videoEncoder = new VideoEncoder();
-            
+            var mailService = new MailService();
+
+            videoEncoder.VideoEncoded += mailService.OnVideoEncoded;
+
             videoEncoder.Encode(video);
         }
     }

@@ -7,7 +7,7 @@ namespace EventsDemo
     {
         public delegate void VideoEncodedEventHandler(object source, EventArgs args);
 
-        public event VideoEncodedEventHandler VideEncoded;
+        public event VideoEncodedEventHandler VideoEncoded;
 
         public void Encode(Video video)
         {
@@ -19,9 +19,9 @@ namespace EventsDemo
 
         protected virtual void OnVideoEncoded()
         {
-            if (VideEncoded != null)
+            if (VideoEncoded != null)
             {
-                VideEncoded(this, EventArgs.Empty);
+                VideoEncoded(this, EventArgs.Empty);
             }
         }
     }
