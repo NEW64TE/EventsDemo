@@ -6,7 +6,7 @@ namespace EventsDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
